@@ -1,0 +1,24 @@
+{
+  "name": "website-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./css/output.css --watch",
+  "build": "npx @tailwindcss/cli -i ./src/input.css -o ./css/output.css --minify"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scrump05/website-new.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Scrump05/website-new/issues"
+  },
+  "homepage": "https://github.com/Scrump05/website-new#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
