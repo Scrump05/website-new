@@ -1,2 +1,178 @@
 @import "tailwindcss";
 
+#social-media-links{
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.contact-info{
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.social-icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+}
+
+.ribbon{
+    background-color: #AAAAAE;
+    color: #E2E1EB;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: white;
+    position: relative;
+}
+
+.nav-links{
+    position: absolute;
+    top: 100%;                 /* directly below the nav bar */
+    left: 2rem;               /* lines up with the button; use 0 for the bar's edge */
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #333;
+    width: 250px;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    text-align: left;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    clip-path: inset(0 0 100% 0);   /* fully hidden, collapsed upward */
+    visibility: hidden;
+    transition: clip-path 0.4s ease-in-out, visibility 0.4s;
+    z-index: 5;
+}
+
+.nav-links.is-active{
+    clip-path: inset(-20px -20px -20px -20px);   /* reveals the menu top to bottom, with room for the shadow */
+    visibility: visible;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.hamburger-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger-button .line{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-button.is-active .line:nth-child(1){
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger-button.is-active .line:nth-child(2){
+    opacity: 0;
+}
+.hamburger-button.is-active .line:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.body{
+    background-color: #E2E1EB;
+    color: #322D27;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.heading{
+    color: #7F7265;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.buttons{
+    background-color: #BF8440;
+    color: #E2E1EB;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer{
+    background-color: #AAAAAE;
+    padding: 20px;
+}
+
+.connect-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #322D27;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.connect-section h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.fade-down {
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(to bottom, #E2E1EB, #AAAAAE);
+}
+
+
+/* Autumn Luxe Color Scheme Hex Codes
+    #E2E1EB - pale ish white 
+    #7F7265 - carpet brown/gray mix 
+    #AAAAAE - light gray
+    #BF8440 - yellowish orange
+    #322D27 - almost black brown
+*/
